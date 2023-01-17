@@ -36,7 +36,7 @@ elseif (isset($_POST["id"]) && isset($_POST["name"]) && isset($_POST["price"])) 
       
     $userid = $conn->real_escape_string($_POST["id"]);
     $username = $conn->real_escape_string($_POST["name"]);
-    $userage = $conn->real_escape_string($_POST["price"]);
+    $price = $conn->real_escape_string($_POST["price"]);
     $sql = "UPDATE products SET name = '$username', price = '$price' WHERE id = '$userid'";
     if($result = $conn->query($sql)){
         header("Location: index.php");
